@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Birthday from "./Birthday";
 import Wish from "./Wish";
 import Snowfall from "react-snowfall";
@@ -15,16 +15,16 @@ function App() {
         radius={[0.5, 2]}
         color="#fff"
       />
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route
-            path="/sarasbirthday"
+            path="/"
             element={<Birthday name="Sara" day={25} month={2} />}
           />
-          <Route path="/sarasbirthday/wish" element={<Wish name="Sara" />} />
-          <Route path="/sarasbirthday/secret" element={<Secret />} />
+          <Route path="/wish" element={<Wish name="Sara" />} />
+          <Route path="/secret" element={<Secret />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
