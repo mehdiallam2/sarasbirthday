@@ -1,0 +1,98 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.heading {
+  font-size: 2.25rem;
+}
+
+.highlight {
+  color: var(--highlight);
+}
+
+.countdown-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.countdown-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.countdown-box {
+  background-color: var(--countdown-box-background);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--countdown-box-color);
+  border-radius: 0.9375rem;
+  width: 7.5rem;
+  height: 7.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.legend {
+  font-size: 30px;
+  color: var(--legend-color);
+}
+
+.wish {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.wish-message {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.birthdate {
+  margin-top: 2rem;
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--birthdate-color);
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+  .countdown-box {
+    font-size: 3.125rem;
+    width: 9rem;
+    height: 9rem;
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+}

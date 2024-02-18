@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+:root {
+  --body-background: #F5EEE6;
+  --body-color: #000;
+  --countdown-box-background: #F3D7CA;
+  --countdown-box-color: #E6A4B4;
+  --legend-color: #E6A4B4;
+  --birthdate-color: #E6A4B4;
+  --highlight: #E6A4B4;
+}
+
+/* :root {
+  --body-background: #8E7AB5;
+  --body-color: #000;
+  --countdown-box-background: #E493B3;
+  --countdown-box-color: #000;
+  --legend-color: #000;
+  --birthdate-color: #E6A4B4;
+  --highlight: #EEA5A6;
+}
+
+:root {
+  --body-background: #1F2544;
+  --body-color: #FFF8E3;
+  --countdown-box-background: #474F7A;
+  --countdown-box-color: #FFF8E3;
+  --legend-color: #FFF8E3;
+  --birthdate-color: #FFD0EC;
+  --highlight: #FFD0EC;
+} */
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  background-color: var(--body-background);
+  color: var(--body-color);
+  font-family: "Great Vibes", cursive;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+body {
+  font-family: "Great Vibes", cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
