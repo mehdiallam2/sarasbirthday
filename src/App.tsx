@@ -19,11 +19,11 @@ function App() {
         <Routes>
           <Route
             index
-            path="/"
+            path="/sarasbirthday"
             element={<Birthday name="Sara" day={25} month={2} />}
           />
-          <Route path="/wish" element={<Wish name="Sara" />} />
-          <Route path="/secret" element={<Secret />} />
+          <Route path="/sarasbirthday/wish" element={<Wish name="Sara" />} />
+          <Route path="/sarasbirthday/secret" element={<Secret />} />
         </Routes>
       </BrowserRouter>
     </div>
