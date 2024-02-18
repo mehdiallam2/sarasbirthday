@@ -18,7 +18,6 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route
-            index
             path="/sarasbirthday"
             element={<Birthday name="Sara" day={25} month={2} />}
           />
