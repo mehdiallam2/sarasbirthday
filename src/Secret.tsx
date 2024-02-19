@@ -1,17 +1,17 @@
 import { motion } from "framer-motion";
-
+import Heart from "./assets/images/heart.png";
 function Secret() {
   return (
-    <div className="wish">
-      <div className="wish-message">
-        We Love You <br />
-        <motion.div
+    <div className="secret">
+      <div className="secret-content">
+        We Love You
+        <motion.img
+        className="secret-image"
+          src={Heart}
           initial={{ scale: 1 }}
           animate={{ scale: 0.8 }}
           transition={{ repeat: Infinity, repeatDelay: 0.8 }}
-        >
-          ❤️
-        </motion.div>
+        />
       </div>
     </div>
   );

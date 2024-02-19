@@ -33,7 +33,6 @@
 .countdown-box {
   background-color: var(--countdown-box-background);
   font-size: 2.25rem;
-  font-weight: 700;
   color: var(--countdown-box-color);
   border-radius: 0.9375rem;
   width: 7.5rem;
@@ -46,20 +45,32 @@
 }
 
 .legend {
-  font-size: 30px;
+  font-size: 1.875rem;
   color: var(--legend-color);
 }
 
-.wish {
+.wish,
+.secret {
   display: grid;
   place-items: center;
   min-height: 100vh;
   text-align: center;
 }
 
-.wish-message {
-  font-size: 45px;
-  font-weight: 700;
+.wish-message,
+.secret-content {
+  font-size: 2.8125rem;
+}
+
+.secret-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.secret-image {
+  width: 3rem;
 }
 
 .birthdate {
