@@ -4,9 +4,9 @@ function Secret() {
   return (
     <div className="secret">
       <div className="secret-content">
-        We Love You
+        I Love You
         <motion.img
-        className="secret-image"
+          className="secret-image"
           src={Heart}
           initial={{ scale: 1 }}
           animate={{ scale: 0.8 }}
