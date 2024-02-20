@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import Wish from "./Wish";
+import Wish from "../pages/Wish";
 
-interface dataType {
+interface CountdownDataType {
   seconds: number;
   hours: number;
   minutes: number;
@@ -9,17 +9,17 @@ interface dataType {
   isItBday: boolean;
 }
 
-interface data {
-  countdownData: dataType;
+interface Data {
+  countdownData: CountdownDataType;
   name: string;
 }
 
-const Countdown = ({ countdownData, name }: data) => {
+const Countdown = ({ countdownData, name }: Data) => {
   if (!countdownData.isItBday) {
     return (
       <div className="countdown-container">
         <motion.h1
-          className="heading"
+          className="countdown-title"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 3 }}
@@ -27,7 +27,7 @@ const Countdown = ({ countdownData, name }: data) => {
           <span className="highlight">{name}'s</span> Birthday Is In
         </motion.h1>
         <motion.div
-          className="countdown-wrapper"
+          className="countdown-box-grid"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 3 }}

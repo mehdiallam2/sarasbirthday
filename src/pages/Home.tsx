@@ -1,18 +1,18 @@
-import { useState, useEffect } from "react";
-import Countdown from "./Countdown";
-import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import Countdown from "../components/Countdown";
+import { motion } from "framer-motion";
 
-interface sara {
+interface Info {
   name: string;
   day: number;
   month: number;
 }
 
-const Birthday = ({ name, day, month }: sara) => {
+function Home({ name, day, month }: Info) {
   const navigate = useNavigate();
   window.addEventListener("dblclick", () => navigate("/secret"));
-  // useState Hooks
+
   const [state, setState] = useState({
     seconds: 0,
     hours: 0,
@@ -20,13 +20,6 @@ const Birthday = ({ name, day, month }: sara) => {
     days: 0,
     isItBday: false,
   });
-
-  if (name === undefined || day === undefined || month === undefined) {
-    // This is if not enough params are provided
-    name = "Deepankar"; // Name of the Person
-    month = 6; // Month of the Birthday
-    day = 14; // Day of the Birthday
-  }
 
   // get current time
   const currentTime = new Date();
@@ -41,7 +34,7 @@ const Birthday = ({ name, day, month }: sara) => {
 
   useEffect(() => {
     setInterval(() => {
-      const countdown = () => {
+      function countdown() {
         // Getting the Current Date
         const dateAtm = new Date();
 
@@ -81,7 +74,7 @@ const Birthday = ({ name, day, month }: sara) => {
           isItBday,
         }));
         // console.log(`${days}:${hours}:${minutes}:${seconds} , ${isItBday}`);
-      };
+      }
       if (!isItBday) {
         countdown();
       } else {
@@ -111,10 +104,10 @@ const Birthday = ({ name, day, month }: sara) => {
   let monthBday = monthNames[birth.getMonth()];
 
   return (
-    <div className="page">
-      <Countdown countdownData={state} name={name} />
-      {!isItBday && (
-        <>
+    <main className="home">
+      <div className="home-container">
+        <Countdown countdownData={state} name={name} />
+        {!isItBday && (
           <motion.div
             className="birthdate"
             initial={{ opacity: 0, y: 20 }}
@@ -123,10 +116,10 @@ const Birthday = ({ name, day, month }: sara) => {
           >
             Birth-Date: {day} {monthBday} {currentYear}
           </motion.div>
-        </>
-      )}
-    </div>
+        )}
+      </div>
+    </main>
   );
-};
+}
 
-export default Birthday;
+export default Home;

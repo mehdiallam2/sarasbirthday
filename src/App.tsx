@@ -1,9 +1,9 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
-import Birthday from "./Birthday";
-import Wish from "./Wish";
+import { Route, Routes } from "react-router-dom";
 import Snowfall from "react-snowfall";
+import Home from "./pages/Home";
+import Wish from "./pages/Wish";
+import Secret from "./pages/Secret";
 import "./App.css";
-import Secret from "./Secret";
 
 function App() {
   return (
@@ -15,16 +15,11 @@ function App() {
         radius={[0.5, 2]}
         color="#fff"
       />
-      <HashRouter>
-        <Routes>
-          <Route
-            path="/"
-            element={<Birthday name="Sara" day={25} month={2} />}
-          />
-          <Route path="/wish" element={<Wish name="Sara" />} />
-          <Route path="/secret" element={<Secret />} />
-        </Routes>
-      </HashRouter>
+      <Routes>
+        <Route path="/" element={<Home name="Sara" month={2} day={25} />} />
+        <Route path="/wish" element={<Wish name="Sara" />} />
+        <Route path="/secret" element={<Secret />} />
+      </Routes>
     </div>
   );
 }
