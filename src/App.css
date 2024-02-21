@@ -5,6 +5,7 @@
   place-items: center;
   text-align: center;
   min-height: 100vh;
+  padding: 2rem 1.5rem;
 }
 
 .home-container {
