@@ -61,6 +61,10 @@
   font-size: 2.8125rem;
 }
 
+.secret-title {
+  color: var(--highlight);
+}
+
 .birthdate {
   color: var(--birthdate-color);
   font-size: 1.5625rem;
