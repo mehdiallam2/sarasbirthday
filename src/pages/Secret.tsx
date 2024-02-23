@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Snowfall } from "react-snowfall";
 
 function Secret() {
   const navigate = useNavigate();
@@ -13,9 +14,10 @@ function Secret() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 3 }}
         >
-          143
+          I Love You
         </motion.h1>
       </div>
+      <Snowfall color="#E6A4B4" />
     </div>
   );
 }

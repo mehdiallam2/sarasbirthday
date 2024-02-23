@@ -1,7 +1,7 @@
-import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Countdown from "../components/Countdown";
 import { motion } from "framer-motion";
+import { Snowfall } from "react-snowfall";
 
 interface Info {
   name: string;
@@ -10,9 +10,6 @@ interface Info {
 }
 
 function Home({ name, day, month }: Info) {
-  const navigate = useNavigate();
-  window.addEventListener("dblclick", () => navigate("/secret"));
-
   const [state, setState] = useState({
     seconds: 0,
     hours: 0,
@@ -118,6 +115,7 @@ function Home({ name, day, month }: Info) {
           </motion.div>
         )}
       </div>
+      <Snowfall color="white" />
     </main>
   );
 }
