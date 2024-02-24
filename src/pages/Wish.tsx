@@ -11,17 +11,19 @@ function Wish({ name }: { name: string }) {
         <ReactTyped
           className="wish-wish"
           strings={[
-            "Happy birthday! I hope all your birthday wishes and dreams come true.",
-            "A wish for you on your birthday, whatever you ask may you receive, whatever you seek may you find, whatever you wish may it be fulfilled on your birthday and always. Happy birthday!",
-            "This birthday, I wish you abundant happiness and love. May all your dreams turn into reality and may lady luck visit your home today. Happy birthday to one of the sweetest people I’ve ever known",
+            `Happy birthday ${name}! I hope all your birthday wishes and dreams come true.`,
+            "Safe hir hli l cadeau ila makntich aslan hlitih 🙂",
+            "Hope you like the notebooks 🙃",
+            "Sara dart 16ans akhiran hadir 39lha u hatwal chwiya 😂",
           ]}
           typeSpeed={60}
           backSpeed={60}
           showCursor={false}
           loop
+          fadeOut
         />
       </div>
-      <Snowfall color="white" />
+      <Snowfall snowflakeCount={80} style={{ opacity: 0.4 }} color="#7360DF" />
     </div>
   );
 }

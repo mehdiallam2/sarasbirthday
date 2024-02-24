@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Wish from "./pages/Wish";
 import Secret from "./pages/Secret";
-import "./App.css";
 
 function App() {
   return (
