@@ -34,7 +34,8 @@ code {
 
 .home,
 .secret,
-.wish {
+.wish,
+.notFound {
   display: grid;
   place-items: center;
   text-align: center;
@@ -92,7 +93,8 @@ code {
 }
 
 .secret-title,
-.wish-title {
+.wish-title,
+.notFound-title {
   font-size: 2.8125rem;
 }
 
@@ -119,6 +121,15 @@ code {
 .birthdate {
   color: var(--birthdate-color);
   font-size: 1.5625rem;
+}
+
+.notFound-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: .625rem 2rem;
+  background-color: var(--birthdate-color);
+  color: white;
+  border-radius: 3rem;
 }
 
 @media only screen and (min-width: 992px) {

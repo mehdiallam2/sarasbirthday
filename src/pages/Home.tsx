@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Countdown from "../components/Countdown";
 import { motion } from "framer-motion";
 import { Snowfall } from "react-snowfall";
+import Wish from "../components/Wish";
 
 interface Info {
   name: string;
@@ -100,20 +101,19 @@ function Home({ name, day, month }: Info) {
   ];
   let monthBday = monthNames[birth.getMonth()];
 
+  if (isItBday) return <Wish name={name} />;
   return (
     <main className="home">
       <div className="home-container">
         <Countdown countdownData={state} name={name} />
-        {!isItBday && (
-          <motion.div
-            className="birthdate"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 3 }}
-          >
-            Birth-Date: {day} {monthBday} {currentYear}
-          </motion.div>
-        )}
+        <motion.div
+          className="birthdate"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 3 }}
+        >
+          Birth-Date: {day} {monthBday} {currentYear}
+        </motion.div>
       </div>
       <Snowfall color="white" />
     </main>

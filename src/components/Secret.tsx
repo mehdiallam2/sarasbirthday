@@ -17,7 +17,7 @@ function Secret() {
           I Love You
         </motion.h1>
       </div>
-      <Snowfall color="#E6A4B4" />
+      <Snowfall snowflakeCount={80} style={{ opacity: 0.5 }} color="#7360DF" />
     </div>
   );
 }
